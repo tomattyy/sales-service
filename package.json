@@ -1,22 +1,27 @@
 {
   "name": "sales-service",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Sales MicroService",
   "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "build": "node -e \"console.log('Build concluído')\"",
+    "lint": "oxlint .",
+    "preview": "node index.js",
+    "test": "jest --coverage"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "jest": "^30.4.2",
+    "jest": "30.4.2",
+    "oxlint": "^1.71.0",
     "supertest": "^7.2.2"
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
   }
 }
